@@ -12,21 +12,22 @@ function createTweet(input) {
 	var quoteAuthor = data.title;
 	var tweetText = "Quote of the day - " + quoteText + " Author: " + quoteAuthor;
 
-	if(!quoteAuthor.length) {
-		quoteAuthor = "Unknow author";
-	}
-	
-	if (tweetText.lenght > 140) {
-		getQuote();
-	} else {
-		var tweet = tweetLink + encodeURIComponent(tweetText);
-		$('.quote').text(quoteText);
-		$('.author').text("Author: " + quoteAuthor);
-		$('.tweet').attr('href', tweet);
+	if (input.length > 0) {
+		if(!quoteAuthor.length) {
+			quoteAuthor = "Unknow author";
+		}
+		
+		if (tweetText.lenght > 140) {
+			getQuote();
+		} else {
+			var tweet = tweetLink + encodeURIComponent(tweetText);
+			$('.quote').text(quoteText);
+			$('.author').text("Author: " + quoteAuthor);
+			$('.tweet').attr('href', tweet);
+		}
 	}
 }
 	
-
 $(document).ready(function() {
 	getQuote();
 	$('.trigger').on('click', function() {
