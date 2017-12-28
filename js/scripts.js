@@ -7,24 +7,31 @@ function getQuote() {
 }
 
 function createTweet(input) {
-	var data = input[0];
+	var data = input[0]; 
 	var quoteText = $(data.content).text().trim();
 	var quoteAuthor = data.title;
 	var tweetText = "Quote of the day - " + quoteText + " Author: " + quoteAuthor;
 
-	if (input.length > 0) {
-		if(!quoteAuthor.length) {
-			quoteAuthor = "Unknow author";
-		}
-		
-		if (tweetText.lenght > 140) {
-			getQuote();
-		} else {
-			var tweet = tweetLink + encodeURIComponent(tweetText);
-			$('.quote').text(quoteText);
-			$('.author').text("Author: " + quoteAuthor);
-			$('.tweet').attr('href', tweet);
-		}
+	switch (!input.length) {
+		case true:
+
+			$('.quote').text("There is no quote");
+			break;
+
+		case false:
+
+			if(!quoteAuthor.length) {
+				quoteAuthor = "Unknow author";
+			}
+				
+			if (tweetText.lenght > 140) {
+				getQuote();
+			} else {
+				var tweet = tweetLink + encodeURIComponent(tweetText);
+				$('.quote').text(quoteText);
+				$('.author').text("Author: " + quoteAuthor);
+				$('.tweet').attr('href', tweet);
+			}
 	}
 }
 	
