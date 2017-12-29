@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald:400,500,700");
+main {
+  font-family: 'Oswald', sans-serif;
+  margin: 0 auto;
+  width: 95%;
+  max-width: 1000px;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: space-around;
+      -ms-flex-align: space-around;
+          align-items: space-around; }
+  main header,
+  main div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  main button {
+    margin: 30px;
+    padding: 5px;
+    width: 300px;
+    font-family: "Oswald", sans-serif;
+    font-size: 20px;
+    border: 2px;
+    border-style: solid;
+    border-radius: 5px;
+    background-color: white;
+    color: black; }
+    main button:hover {
+      background-color: black;
+      cursor: pointer;
+      color: white; }
+    main button .fa-twitter {
+      color: #1da1f2; }
